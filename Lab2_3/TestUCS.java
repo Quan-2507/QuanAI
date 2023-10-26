@@ -25,15 +25,12 @@ public class TestUCS {
 		nodeD.addEdge(nodeH, 7);
 		nodeE.addEdge(nodeG, 6);
 		nodeF.addEdge(nodeG, 1);
-		ISearchAlgo algo1 = new BreadthFirstSearchAlgo();
-		Node result = algo1.execute(nodeS, "G");
-		System.out.println("BFS:	" + NodeUtils.printPath(result));
-		ISearchAlgo algo2 = new DepthFirstSearchAlgo();
-		Node result2 = algo2.execute(nodeS, "G");
-		System.out.println("DFS:	" + NodeUtils.printPath(result2));
-		ISearchAlgo algo3 = new UniformCostSearchAlgo();
-		Node result3 = algo3.execute(nodeS, "G");
-		System.out.print("UCS:	  ");
+		UniformCostSearchAlgo UCS = new UniformCostSearchAlgo();
+		Node nodeSG = UCS.execute(nodeS, "G");
+		NodeUtils.print(nodeSG);
+		
+		Node nodeAG = UCS.execute(nodeS, "A", "G");
+		NodeUtils.print(nodeAG);
 		
 	}
 }

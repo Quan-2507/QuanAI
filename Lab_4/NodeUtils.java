@@ -1,4 +1,4 @@
-package Lab2_3;
+package Lab_4;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,6 +30,6 @@ public class NodeUtils {
 		for (String str : path)
 			builder.append(str + " —> ");
 		System.out.println(builder.substring(0, builder.length() - 4));
-		System.out.println(node.getPathCost() + "\n");
+		System.out.println(node.getG() + "\n");
 	}
 }
