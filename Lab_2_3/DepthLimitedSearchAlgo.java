@@ -1,4 +1,4 @@
-package Lab2_3;
+package Lab_2_3;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;

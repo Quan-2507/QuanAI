@@ -1,4 +1,4 @@
-package Lab2_3;
+package Lab_2_3;
 
 import java.security.Principal;
 import java.util.LinkedList;
