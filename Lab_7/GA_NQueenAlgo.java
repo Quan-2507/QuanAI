@@ -1,18 +1,18 @@
-package Lab_6_7;
+package Lab_7;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.TreeSet;
 
-public class GeneticAlgo {
+public class GA_NQueenAlgo {
 	public static final int POP_SIZE = 100;// Population size
 	public static final double MUTATION_RATE = 0.03;
 	public static final int MAX_ITERATIONS = 100000;
 	List<Node> population = new ArrayList<Node>();
 	Random rd = new Random();
 
-	public GeneticAlgo() {
+	public GA_NQueenAlgo() {
 		initPopulation();
 	}
 
@@ -30,7 +30,6 @@ public class GeneticAlgo {
 		Node x, y;
 		Node child = null;
 		List<Node> pop = new ArrayList<Node>();
-
 		while (repeat > 0) {
 			for (int i = 0; i < population.size(); i++) {
 				x = getParentByRandomSelection();
@@ -39,7 +38,7 @@ public class GeneticAlgo {
 					y = getParentByRandomSelection();
 
 				child = preproduce(x, y);
-				if ((Math.random() * 100 / 100) <= MUTATION_RATE)
+				if ((Math.random()) <= MUTATION_RATE)
 					mutate(child);
 
 				if (child.getH() == 0)

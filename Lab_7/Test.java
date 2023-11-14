@@ -1,11 +1,14 @@
-package Lab_6_7;
+package Lab_7;
 
-public class Test {
+public class Test{
 
 	public static void main(String[] args) {
-		GeneticAlgo ga = new GeneticAlgo();
+		GA_NQueenAlgo ga = new GA_NQueenAlgo();
+
 		Node re = ga.execute();
 		System.out.println("H = " + re.getH());
 		re.displayBoard();
+		
 	}
+
 }
